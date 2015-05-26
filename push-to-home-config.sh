@@ -4,12 +4,13 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 home_config="/home/phil/.config/geany/plugins/geanylua"
 
 if [ -z ${1+x} ]; then
-	echo "push-to-home-config requires a filename parameter"
+	echo "push-to-home-config requires at least one filename parameter"
 else
-	fileToPush="${1}"
-	if [ -f "${fileToPush}" ]; then
-		cp "${DIR}/${fileToPush}" "${home_config}/${fileToPush}"
-	else
-		echo "no file '${DIR}/${fileToPush}' was found."
-	fi
+    for file in "$@"; do
+        if [ -f "${file}" ]; then
+            cp "${file}" "${home_config}"
+        else
+            echo "no file '${file}' was found."
+        fi
+    done
 fi
