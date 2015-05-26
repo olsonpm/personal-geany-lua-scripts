@@ -1,0 +1,1 @@
+os.execute("xterm -e \"cd " .. geany.dirname(geany.filename()) .. "; echo '---------\nExecuting\n---------\n'; c_execute '" .. geany.filename() .. "'; read -n1 -r -p '\n---------------------\nPress any key to exit\n---------------------\n' \" &")
