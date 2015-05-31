@@ -168,7 +168,7 @@ onSaveExts = {
 	[".json"] = formatJson,
 	[".html"] = formatHtml,
 	[".erb"] = formatHtml,
-        [".cs"] = formatCSharp
+    [".cs"] = formatCSharp
 }
 
 local file = assert(io.open(SAVE_FILE, "r"))
