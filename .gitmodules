@@ -1,0 +1,3 @@
+[submodule "geany-lua-scripts"]
+	path = geany-lua-scripts
+	url = git@github.com:DGivney/geany-lua-scripts.git
